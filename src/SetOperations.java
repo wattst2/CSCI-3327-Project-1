@@ -25,7 +25,6 @@ public class SetOperations {
 		return unionAB;
 	}
 	
-	
 	public ArrayList<Integer> findIntersection(ArrayList<Integer> listA, ArrayList<Integer> listB) {
 		ArrayList<Integer> intersectionAB = new ArrayList<>();
 		Collections.sort(listA);
