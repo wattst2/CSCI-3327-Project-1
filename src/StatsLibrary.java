@@ -3,7 +3,8 @@
  */
 
 
-
+import java.lang.Math;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Collections;
 public class StatsLibrary {
@@ -15,6 +16,7 @@ public class StatsLibrary {
 	 */
 	public double findMean(ArrayList<Double> inputNumbers) {
 		double sum = 0;
+		//for each singleElement in inputNumbers arraylist
 		for(double singleElement : inputNumbers) {
 			sum = sum + singleElement;
 		}
@@ -112,4 +114,92 @@ public class StatsLibrary {
 		result = Math.sqrt(dev);
 		return result;
 	}
+	
+	public ArrayList<Integer> findUnion(ArrayList<Integer> listA, ArrayList<Integer> listB) {
+		//creates a new list that will be the union of A and B
+		ArrayList<Integer> unionAB = new ArrayList<>();
+		//adds all of A to union list
+		unionAB.addAll(listA);
+		//adds all of B to union list
+		unionAB.addAll(listB);
+		//sorts the union list so we can find any duplicates
+		Collections.sort(unionAB);
+		//using a for loop, we go through the sorted union list. if the element is the same as the one before it, we remove the duplicate.
+		for(int i = 1; i < unionAB.size(); i++) {
+			if(unionAB.get(i) == unionAB.get(i - 1)) {
+				unionAB.remove(i);
+			}
+		}
+		//return the union set
+		return unionAB;
+	}
+	
+	public ArrayList<Integer> findIntersection(ArrayList<Integer> listA, ArrayList<Integer> listB) {
+		//creates a new arraylist that will contain the intersection of A and B
+		ArrayList<Integer> intersectionAB = new ArrayList<>();
+		//sorts both lists
+		Collections.sort(listA);
+		Collections.sort(listB);
+		//checks listA with looks for matches with list B
+		for(int i = 0; i < listA.size(); i++) {
+			for(int j = 0; j < listB.size(); j++) {
+				//if there is a match, add the element to the intersection arraylist
+				if(listA.get(i) == listB.get(j)) {
+					intersectionAB.add(listA.get(i));
+					break;
+				}
+			}
+		}
+		return intersectionAB;
+	}
+	
+	public ArrayList<Integer> findComplement(ArrayList<Integer> list, ArrayList<Integer> set) {
+		ArrayList<Integer> listComplement = new ArrayList<>(set);
+		Collections.sort(list);
+		Collections.sort(set);
+		
+		for(int i = 0; i < list.size(); i++) {
+			for(int j = 0; j < set.size(); j++) {
+				if(list.get(i) == set.get(j)) {
+					listComplement.remove(list.get(i));
+					break;
+				}
+			}
+		}
+		return listComplement;
+	}
+	
+	//sources: 
+	//https://www.javatpoint.com/factorial-program-in-java
+	//https://www.geeksforgeeks.org/biginteger-class-in-java/
+	
+	public BigInteger factorial(int i) {
+		if (i == 0) {
+			return BigInteger.ONE;
+		} else {
+			BigInteger b = BigInteger.valueOf(i);
+			return b.multiply(factorial(i - 1));
+		}
+	}
+	
+	public BigInteger solveCombo(int n, int r) {
+		if (r > n) {
+			return BigInteger.ZERO;
+		}
+		
+		BigInteger nFact = factorial(n);
+		BigInteger denom = factorial(n - r).multiply(factorial(r));
+		return nFact.divide(denom);
+	}
+	
+	public BigInteger solvePerm(int n, int r) {
+		if (r > n) {
+			return BigInteger.ZERO;
+		}
+		BigInteger nFact = factorial(n);
+		BigInteger denom = factorial(n - r);
+		return nFact.divide(denom);
+	}
+	
+	
 }
