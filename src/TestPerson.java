@@ -1,4 +1,4 @@
-public class testPerson {
+public class TestPerson {
 	public static void main(String[] args) {
 		for(int i = 1; i < 31; i++) {
 			Person test = new Person();

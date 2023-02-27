@@ -38,9 +38,7 @@ public class BirthdayProgram {
 			runWin += count;
 			count = 0;
 			randomBirthdays.clear();
-
 		}
 		return (double)runWin / (double)numOfRuns;
 	}
-	
 }

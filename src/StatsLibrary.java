@@ -201,5 +201,13 @@ public class StatsLibrary {
 		return nFact.divide(denom);
 	}
 	
-	
+//	public BigInteger solveBinoDistrib(int n, int y, double p) {
+//		BigInteger combo = solveCombo(n, y);
+//		double q = p - 1;
+//		double pVar = Math.pow(p, y);
+//		double yVar = Math.pow(y, p);
+//		return combo.multiply(pVar);
+//	}
+//	
+//	
 }
