@@ -4,7 +4,7 @@ This is my submission for CSCI-3327-001's Project 1.
 
 ## Description
 This project contains:
-- StatsLibrary - A library of various functions used primarily in statistics
+- StatsLibrary - A library of various functions used primarily in statistics
 - TestStatsLibrary - Tests StatsLibrary's methods
 - Person - Creates an object with a randomized birthday
 - TestPerson - Tests creating Person objects and its methods
