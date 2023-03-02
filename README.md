@@ -21,7 +21,7 @@ This project contains:
 
 ## Sources
 
-Listed below are the various sourecs I used during this project:
+Listed below are the various sources I used during this project:
 - [Decimal to percentage](https://stackoverflow.com/questions/62438100/string-decimal-to-percentage-in-java)
 - [Generating a range of integers](https://stackoverflow.com/questions/363681/how-do-i-generate-random-integers-within-a-specific-range-in-java)
 - [Switches and cases](https://www.geeksforgeeks.org/switch-statement-in-java)
