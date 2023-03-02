@@ -14,7 +14,10 @@ This project contains:
 - TestBirthday Program - Tests BirthdayProgram and its methods.
 - Excel sheets - Histograms of book examples, Binomial and Geometric Distribution problems
 - Formula sheet - Contains book formulas covered up to now
-- GitHub Essay - Essay on GitHub workflows
+- Git essay - Essay on Git workflow
+- Java written documentation - a written documentation on my Java program
+- PowerPoint presentation - a PowerPoint presentation on my Java program
+- Extra credit consideration - my document including extra efforts put into the project
 
 ## Sources
 
